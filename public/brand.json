@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "brandName": "Google",
+      "brandImage": "https://img.freepik.com/free-psd/google-sign-podium-stage-with-blue-background_47987-9814.jpg?size=626&ext=jpg&ga=GA1.1.1619216500.1694888339&semt=sph"
+    },
+    {
+      "id": 2,
+      "brandName": "Apple",
+      "brandImage": "https://images.unsplash.com/photo-1565536421961-1f165e0c981e?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGlwaG9uZSUyMGNvdmvyfGVufDB8fDB8fHww&w=500"
+    },
+    {
+      "id": 3,
+      "brandName": "Samsung",
+      "brandImage": "https://images.unsplash.com/photo-1662947995689-ec5165848ad0?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2Ftc3vuZyUyMGNvdmvyfGVufDB8fDB8fHww&w=500"
+    },
+    {
+      "id": 4,
+      "brandName": "Walton",
+      "brandImage": "https://i.ibb.co/LRSmPqM/download.png"
+    },
+    {
+      "id": 5,
+      "brandName": "Oppo",
+      "brandImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU_AHUn4wnsNSuHnL2mDG-Biosar8t28BvXQ&usqp=CAU"
+    },
+    {
+      "id": 6,
+      "brandName": "Mi",
+      "brandImage": "https://i.ibb.co/fY7hdwP/download-1.png"
+    }
+  ]
+  
