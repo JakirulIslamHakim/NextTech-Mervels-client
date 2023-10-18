@@ -2,8 +2,19 @@ import { Link } from "react-router-dom";
 
 
 const Login = () => {
+
+    const handleLogin = e => {
+        e.preventDefault()
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        const user = {email,password};
+        console.log(user);
+    }
+
     return (
-        <form className="card-body">
+        <form onSubmit={handleLogin} className="card-body">
+            <h3 className="text-4xl font-bold">Please login</h3>
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Email</span>
