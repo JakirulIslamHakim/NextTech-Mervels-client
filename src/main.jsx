@@ -4,11 +4,12 @@ import App from './App.jsx'
 import './index.css'
 import { RouterProvider } from 'react-router-dom'
 import Router from './Route/Router.jsx'
+import AuthProvider from './AuthProvider/AuthProvider.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={Router}>
-      <App></App>
-    </RouterProvider>
-  </React.StrictMode>,
+    <AuthProvider>
+      <RouterProvider router={Router}/>
+    </AuthProvider>
+  </React.StrictMode>
 )

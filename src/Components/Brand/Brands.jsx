@@ -11,7 +11,7 @@ const Brands = () => {
 
     return (
         <div className="my-10">
-            <h className='text-4xl text-center font-bold '>Our Products</h>
+            <h2 className='text-4xl text-center font-bold '>Our Products</h2>
             <div className="mx-auto p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
                 {
                     brands.map(brand => <>

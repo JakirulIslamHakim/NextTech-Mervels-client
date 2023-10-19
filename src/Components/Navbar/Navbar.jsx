@@ -1,7 +1,24 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useState } from "react";
+
 
 
 const Navbar = () => {
+    const [showDetail,setShowDetail] = useState(false);
+    console.log(showDetail);
+
+    const { LogOut, user } = useContext(AuthContext);
+
+    const handleSingOut = () => {
+        LogOut()
+            .then(() => {
+                console.log('succesfully logout');
+            })
+            .then(err => console.log(err))
+    }
+
     const navlink = <>
         <li className="font-bold text-base"><NavLink to={'/'}>Home</NavLink></li>
         <li className="font-bold text-base"><NavLink to={'/addProduct'}>Add Product </NavLink></li>
@@ -30,7 +47,21 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <NavLink className={'btn'} to={'/login'}>Login</NavLink>
+                {
+                    user ?
+                        <div>
+                            <div className="relative">
+                                <img onClick={()=> setShowDetail(!showDetail)} className="w-14 cursor-pointer" src={'https://i.ibb.co/hmGjdtS/user.png'} alt="" />
+                                <div className={`bg-gray-500 rounded-xl absolute right-6 p-5 space-y-2 ${showDetail ? '' : 'hidden'}`}>
+                                    <h2 className="text-xl font-bold">Jakirul</h2>
+                                    <p className="font-semibold">jairulhaki@mail.com,</p>
+                                    <button className="btn" onClick={handleSingOut}>logout</button>
+                                </div>
+                            </div>
+                        </div>
+                        : <NavLink className={'btn'} to={'/login'}>Login</NavLink>
+                }
+
             </div>
         </div>
     );
