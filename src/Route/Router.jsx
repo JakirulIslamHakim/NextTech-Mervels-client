@@ -3,6 +3,7 @@ import App from "../App";
 import Home from "../Page/Home";
 import Login from "../Components/Login/Login";
 import Singup from "../Components/SIngup/Singup";
+import AddProduct from "../Components/AddProduct/AddProduct";
 
 const Router = createBrowserRouter ([
     {
@@ -20,6 +21,10 @@ const Router = createBrowserRouter ([
             {
                 path:'/singup',
                 element:<Singup></Singup>
+            },
+            {
+                path:'addProduct',
+                element:<AddProduct></AddProduct>
             }
         ]
     }
