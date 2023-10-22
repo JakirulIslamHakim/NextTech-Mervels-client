@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const Navbar = () => {
     const [showDetail,setShowDetail] = useState(false);
-    console.log(showDetail);
+    // console.log(showDetail);
 
     const { LogOut, user } = useContext(AuthContext);
 

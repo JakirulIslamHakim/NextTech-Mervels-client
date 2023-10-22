@@ -4,6 +4,8 @@ import Home from "../Page/Home";
 import Login from "../Components/Login/Login";
 import Singup from "../Components/SIngup/Singup";
 import AddProduct from "../Components/AddProduct/AddProduct";
+import Products from "../Components/Products/Products";
+import Details from "../Components/Details/Details";
 
 const Router = createBrowserRouter ([
     {
@@ -23,8 +25,18 @@ const Router = createBrowserRouter ([
                 element:<Singup></Singup>
             },
             {
-                path:'addProduct',
+                path:'/addProduct',
                 element:<AddProduct></AddProduct>
+            },
+            {
+                path:'/products/:brand',
+                element:<Products></Products>,
+                loader:({params})=> fetch(`http://localhost:5000/products/${params.brand}`)
+            },
+            {
+                path:'/product/:id',
+                element:<Details></Details>,
+                loader:({params}) => fetch(`http://localhost:5000/product/${params.id}`)
             }
         ]
     }
