@@ -6,37 +6,43 @@ import Singup from "../Components/SIngup/Singup";
 import AddProduct from "../Components/AddProduct/AddProduct";
 import Products from "../Components/Products/Products";
 import Details from "../Components/Details/Details";
+import MyCart from "../Components/MyCart/MyCart";
 
-const Router = createBrowserRouter ([
+const Router = createBrowserRouter([
     {
-        path:'/',
-        element:<App></App>,
-        children:[
+        path: '/',
+        element: <App></App>,
+        children: [
             {
-                path:'/',
-                element:<Home></Home>
+                path: '/',
+                element: <Home></Home>
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/singup',
-                element:<Singup></Singup>
+                path: '/singup',
+                element: <Singup></Singup>
             },
             {
-                path:'/addProduct',
-                element:<AddProduct></AddProduct>
+                path: '/addProduct',
+                element: <AddProduct></AddProduct>
             },
             {
-                path:'/products/:brand',
-                element:<Products></Products>,
-                loader:({params})=> fetch(`http://localhost:5000/products/${params.brand}`)
+                path: '/products/:brand',
+                element: <Products></Products>,
+                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brand}`)
             },
             {
-                path:'/product/:id',
-                element:<Details></Details>,
-                loader:({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+                path: '/product/:id',
+                element: <Details></Details>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: '/myCart',
+                element: <MyCart></MyCart>,
+                loader:() =>fetch(`http://localhost:5000/myCard`)
             }
         ]
     }

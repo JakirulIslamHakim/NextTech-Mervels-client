@@ -19,9 +19,9 @@ const Products = () => {
                 <div data-src="/path/to/image-2.jpg" />
             </AwesomeSlider>
 
-                {
-                    products.length === 0 && <h3 className='text-xl md:text-5xl font-bold text-center my-20'>Sorry ..This Products Stock not avilable</h3>
-                }
+            {
+                products.length === 0 && <h3 className='text-xl md:text-5xl font-bold text-center my-20'>Sorry ..This Brands Products Stock not available</h3>
+            }
             <div className='grid md:grid-cols-2 gap-5 my-14'>
                 {
                     products.map(product => <>
@@ -33,12 +33,12 @@ const Products = () => {
                                 <p className='font-bold'>{product.brand}</p>
                                 <p className='font-semibold'>{product.price} TK</p>
                                 <p>
-                                    {<div class="rating">
-                                        <input type="radio" name="rating-1" class="mask mask-star" />
-                                        <input type="radio" name="rating-2" class="mask mask-star" checked />
-                                        <input type="radio" name="rating-3" class="mask mask-star" />
-                                        <input type="radio" name="rating-4" class="mask mask-star" />
-                                        <input type="radio" name="rating-5" class="mask mask-star" />
+                                    {<div className="rating">
+                                        <input type="radio" name="rating-1" className="mask mask-star" />
+                                        <input type="radio" name="rating-2" className="mask mask-star" checked />
+                                        <input type="radio" name="rating-3" className="mask mask-star" />
+                                        <input type="radio" name="rating-4" className="mask mask-star" />
+                                        <input type="radio" name="rating-5" className="mask mask-star" />
                                     </div>}
                                 </p>
                                 <div className="card-actions justify-end">

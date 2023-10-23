@@ -17,7 +17,7 @@ const Brands = () => {
                 {
                     brands.map(brand => <>
                         <Link to={`/products/${brand.brandName}`}>
-                            <div className="card card-compact  bg-base-100 shadow-xl">
+                            <div className="card card-compact  bg-base-100 hover:shadow-xl border">
                                 <figure className="h-48"><img className="w-full" src={brand.brandImage} alt="" /></figure>
                                 <div className="card-bod p-6">
                                     <h2 className="text-3xl font-bold text-center">{brand.brandName}</h2>
