@@ -1,12 +1,8 @@
 import { useEffect } from "react";
 import { useRef } from "react";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { useContext } from "react";
-import { useState } from "react";
 
 
 const AddProduct = () => {
-    const { user} = useContext(AuthContext);
     
     const nameRef = useRef();
     useEffect(() => {
@@ -17,8 +13,6 @@ const AddProduct = () => {
 
     const handleAddProduct = (e) => {
         e.preventDefault();
-        const userEmail = user.email;
-
         const form = e.target;
         const name = form.name.value;
         const image = form.image.value;
@@ -28,7 +22,7 @@ const AddProduct = () => {
         const brand = form.brand.value;
         const description = form.description.value;
 
-        const productDetails = { name, image, price, rating, productType, brand, description, userEmail };
+        const productDetails = { name, image, price, rating, productType, brand, description };
         // console.log(productDetails);
 
         fetch('http://localhost:5000/addProduct',{

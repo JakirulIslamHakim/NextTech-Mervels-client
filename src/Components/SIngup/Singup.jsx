@@ -36,9 +36,9 @@ const Singup = () => {
     }
 
     return (
-        <div className='w-3/4 md:w-1/2 mx-auto glass rounded-2xl bg-gray-400'>
+        <div className='w-3/4 md:w-1/2 mx-auto glass rounded-2xl bg-gray-400 text-center'>
             <form onSubmit={handleSingup} className="card-body">
-                <h3 className="text-4xl font-bold">Please login</h3>
+                <h3 className="text-4xl font-bold">Please Singup</h3>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Name</span>
@@ -69,7 +69,7 @@ const Singup = () => {
                     </div>
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn btn-primary">Login</button>
+                    <button className="btn btn-primary">Singup</button>
                 </div>
                 <p className="text-2xl my-6">Already have an account ? Please <Link className="font-bold text-blue-800" to={'/login'}>Login</Link></p>
             </form>

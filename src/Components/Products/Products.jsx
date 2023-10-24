@@ -43,7 +43,7 @@ const Products = () => {
                                 </p>
                                 <div className="card-actions justify-end">
                                     <Link to={`/product/${product._id}`}> <button className="btn btn-primary">Details</button></Link>
-                                    <button className="btn btn-primary">Update</button>
+                                   <Link to={`/update/${product._id}`}><button className="btn btn-primary">Update</button></Link>
                                 </div>
                             </div>
                         </div>
