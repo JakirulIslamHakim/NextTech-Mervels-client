@@ -8,6 +8,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, seTLoading] = useState(true);
+    const [theme,setTheme] = useState(true)
 
     const createUser = (email, password) => {
         seTLoading(true)
@@ -49,10 +50,12 @@ const AuthProvider = ({ children }) => {
         singInUser,
         googleLogin,
         LogOut,
+        theme,
+        setTheme,
     }
     console.log(user);
     return (
-        <AuthContext.Provider value={authInfo}>
+        <AuthContext.Provider value={authInfo} >
             {children}
         </AuthContext.Provider>
     );

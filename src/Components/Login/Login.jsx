@@ -3,6 +3,7 @@ import { useContext, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -28,22 +29,44 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         form.reset();
+        Swal.fire({
+          icon: "success",
+          title: "Login Successfully",
+          text: "Welcome",
+        });
         navigate(location?.state ? location.state : "/");
       })
-      .then((err) => console.log(err));
+      .catch((err) => {
+        Swal.fire({
+          icon: "error",
+          title: "Email or password are not valid",
+          text: "Please,provide a valid email and password",
+        })
+        console.log(err)
+      });
   };
 
   const handleGoogleLogin = () => {
     googleLogin()
       .then((result) => {
-        console.log(result.user);
+        Swal.fire({
+          icon: "success",
+          title: "Login Successfully",
+          text: "Welcome",
+        });
         navigate(location?.state ? location.state : "/");
       })
-      .then((err) => console.log(err));
+      .catch((err) => {
+        Swal.fire({
+          icon: "error",
+          // title: err.massage,
+          text: err.massage,
+        });
+      });
   };
 
   return (
-    <div className="w-3/4 md:w-1/2 mx-auto glass rounded-2xl bg-gray-400 text-center">
+    <div  data-theme="light" className="w-3/4 md:w-1/2 mx-auto glass rounded-2xl dark:text-black bg-gray-400 text-center">
       <form onSubmit={handleLogin} className="card-body">
         <h3 className="text-4xl font-bold">Please login</h3>
         <div className="form-control">

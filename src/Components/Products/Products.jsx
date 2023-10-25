@@ -14,9 +14,9 @@ const Products = () => {
     return (
         <div>
             <AwesomeSlider className='md:h-[500px]' cssModule={AwesomeSliderStyles}>
-                <div data-src={'https://i.ibb.co/bKvRXYV/Education.png'} />
-                <div data-src={'https://i.ibb.co/bKvRXYV/Education.png'} />
-                <div data-src="/path/to/image-2.jpg" />
+                <div data-src={'https://imgeng.jagran.com/images/2022/dec/best%20camer%20phone%20under%20200001670919342228.jpg'} />
+                <div data-src={'https://i.ibb.co/PNYnWdc/computer-2982270-640-4.jpg'} />
+                <div data-src={"https://i.ibb.co/3791ST2/download.jpg"} />
             </AwesomeSlider>
 
             {

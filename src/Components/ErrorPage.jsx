@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
-    <div className=" ">
+    <div className="relative">
       <img
-        className="h-[700px] md:w-3/4 mx-auto "
+        className="h-screen w-full mx-auto "
         src={"https://i.ibb.co/Xy1bRgn/404.gif"}
         alt=""
       />
-      <button className="btn btn-primary flex justify-center  mx-auto">
+      {/* <button className="btn btn-primary flex justify-center absolute top-11  mx-auto">
         <Link  to={-1} replace= {true}>Go Back</Link>
-      </button>
+      </button> */}
     </div>
   );
 };
