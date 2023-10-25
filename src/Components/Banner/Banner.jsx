@@ -8,9 +8,9 @@ const Banner = () => {
         <div className='mt-2 p-4'>
             <div className='flex'>
                 <Marquee speed='100'>
-                    <h2 className='text-2xl '>TechFrenzy Deal: Unleash 30% Off on Your Favorites!</h2>
+                    <h2 className='md:text-2xl'>TechFrenzy Deal: Unleash 30% Off on Your Favorites! ‎ ‎ ‎ ‎</h2>
                 </Marquee>
-                <button className='btn btn-error text-2xl text-white'>Discount !!</button>
+                <button className='btn btn-error md:text-2xl text-white'>Discount !!</button>
             </div>
             <div className="hero h-[500px] md:h-[700px] rounded-2xl mt-4" style={{ backgroundImage: 'url(https://img.freepik.com/free-vector/wireless-technology-isometric-composition-poster_1284-15266.jpg?size=626&ext=jpg&ga=GA1.1.1619216500.1694888339&semt=ais)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>

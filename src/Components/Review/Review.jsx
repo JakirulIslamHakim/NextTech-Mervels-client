@@ -15,8 +15,8 @@ const Review = () => {
     e.preventDefault();
     const message = e.target.message.value;
     const review = { userName, userPhoto, message };
-    if(!message){
-        return
+    if (!message) {
+      return;
     }
 
     fetch("http://localhost:5000/reviews", {
@@ -26,25 +26,26 @@ const Review = () => {
       },
       body: JSON.stringify(review),
     })
-    .then(res => res.json())
-    .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
-        if(data.acknowledged){
-            Swal.fire({
-                icon: "success",
-                title: "Thank you",
-                // text: "Welcome",
-              });
+        if (data.acknowledged) {
+          Swal.fire({
+            icon: "success",
+            title: "Thank you",
+            // text: "Welcome",
+          });
         }
-    })
-    
+      });
   };
 
   return (
-    <div>
-        <h1 className="text-4xl font-bold text-center">Customer Review </h1>
-      <form onSubmit={handleReview} className="my-10">
-        <h2 className="text-2xl font-bold mb-5">Please,Share your review</h2>
+    <div className="p-3">
+      <h1 className="text-4xl font-bold text-center">Customer Review </h1>
+      <form onSubmit={handleReview} className="my-10 ">
+        <h2 className="text-2xl font-bold mb-5 text-center md:text-left">
+          Please,Share your review
+        </h2>
         <div>
           <textarea
             maxLength={100}
@@ -53,7 +54,9 @@ const Review = () => {
             className="textarea textarea-bordered textarea-lg w-full max-w-xl"
           ></textarea>
         </div>
-        <input className="btn btn-primary" type="submit" value="Submit" />
+        <div className="text-center md:text-left">
+          <input className="btn btn-primary" type="submit" value="Submit" />
+        </div>
       </form>
     </div>
   );
