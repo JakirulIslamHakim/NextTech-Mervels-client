@@ -36,12 +36,12 @@ const Router = createBrowserRouter([
             {
                 path: '/products/:brand',
                 element: <Products></Products>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brand}`)
+                loader: ({ params }) => fetch(`https://nex-tech-marvels-server-ae3iinbfs-jakirulislamhakim.vercel.app/products/${params.brand}`)
             },
             {
                 path: '/product/:id',
                 element:<PrivateRoute> <Details></Details></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://nex-tech-marvels-server-ae3iinbfs-jakirulislamhakim.vercel.app/product/${params.id}`)
             },
             {
                 path: '/myCart',
@@ -50,7 +50,7 @@ const Router = createBrowserRouter([
             {
                 path:'/update/:id',
                 element:<PrivateRoute><Update></Update></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://nex-tech-marvels-server-ae3iinbfs-jakirulislamhakim.vercel.app/product/${params.id}`)
             }
         ]
     }

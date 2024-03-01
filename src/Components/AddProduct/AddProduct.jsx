@@ -25,7 +25,7 @@ const AddProduct = () => {
         const productDetails = { name, image, price, rating, productType, brand, description };
         // console.log(productDetails);
 
-        fetch('http://localhost:5000/addProduct',{
+        fetch('https://nex-tech-marvels-server-ae3iinbfs-jakirulislamhakim.vercel.app/addProduct',{
             method:"POST",
             headers: {
                 'content-type':'application/json'

@@ -38,7 +38,7 @@ const Update = () => {
     console.log(productDetails);
     // console.log(productDetails);
 
-    fetch(`http://localhost:5000/product/${_id}`,{
+    fetch(`https://nex-tech-marvels-server-ae3iinbfs-jakirulislamhakim.vercel.app/product/${_id}`,{
       method:'put',
       headers:{
         'content-type': 'application/json'

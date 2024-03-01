@@ -19,7 +19,7 @@ const Review = () => {
       return;
     }
 
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://nex-tech-marvels-server-ae3iinbfs-jakirulislamhakim.vercel.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -54,7 +54,7 @@ const Review = () => {
             className="textarea textarea-bordered textarea-lg w-full max-w-xl"
           ></textarea>
         </div>
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left mt-3 ml-5">
           <input className="btn btn-primary" type="submit" value="Submit" />
         </div>
       </form>

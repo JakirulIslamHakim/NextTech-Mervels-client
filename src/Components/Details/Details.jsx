@@ -13,7 +13,7 @@ const Details = () => {
     console.log(productWithEmail);
 
     const handleAddCart =()=>{
-        fetch('http://localhost:5000/addCart',{
+        fetch('https://nex-tech-marvels-server-ae3iinbfs-jakirulislamhakim.vercel.app/addCart',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'

@@ -1,7 +1,8 @@
 const Faq = () => {
   return (
     <div>
-        <h3 className="text-5xl font-bold text-center">FAQ</h3> <hr className="border-4 mt-4 border-double border-black w-40 mx-auto"/>
+      <h3 className="text-5xl font-bold text-center">FAQ</h3>{" "}
+      <hr className="border-4 mt-4 border-double border-black w-40 mx-auto" />
       <div className="md:flex gap-5 my-10">
         <div className="md:w-1/2">
           <div className="collapse collapse-plus bg-base-200">
@@ -12,7 +13,7 @@ const Faq = () => {
             <div className="collapse-content">
               <p>
                 To place an order, simply browse our product listings, select
-                your desired item, and click "Add to Cart." Once you've added
+                your desired item, and click Add to Cart. Once you have added
                 all the items you want, proceed to the checkout page to complete
                 your purchase.
               </p>

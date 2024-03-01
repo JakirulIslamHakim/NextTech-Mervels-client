@@ -18,7 +18,9 @@ const MyCart = () => {
 
   useEffect(() => {
     if (userName) {
-      fetch(`http://localhost:5000/myCart/${userName}`)
+      fetch(
+        `https://nex-tech-marvels-server-ae3iinbfs-jakirulislamhakim.vercel.app/myCart/${userName}`
+      )
         .then((res) => res.json())
         .then((data) => {
           setMyCards(data);
@@ -28,7 +30,11 @@ const MyCart = () => {
   }, [userName]);
 
   if (!userName) {
-    return <h2 className={`text-3xl text-center mt-16 ${!user&& 'hidden'}`}>Loading....</h2>;
+    return (
+      <h2 className={`text-3xl text-center mt-16 ${!user && "hidden"}`}>
+        Loading....
+      </h2>
+    );
   }
 
   const handleDelete = (id) => {
@@ -43,9 +49,12 @@ const MyCart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         console.log(id);
-        fetch(`http://localhost:5000/cart/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://nex-tech-marvels-server-ae3iinbfs-jakirulislamhakim.vercel.app/cart/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
@@ -61,7 +70,9 @@ const MyCart = () => {
   return (
     <div className="my-8">
       {myCards && myCards.length === 0 && (
-        <h1 className="text-center text-3xl font-bold mt-44 text-red-600 underline">You have not added any product </h1>
+        <h1 className="text-center text-3xl font-bold mt-44 text-red-600 underline">
+          You have not added any product{" "}
+        </h1>
       )}
       <div className="grid md:grid-cols-2 gap-5 p-2">
         {myCards &&
